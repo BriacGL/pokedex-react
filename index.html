@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex - Salamèche</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin defer></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin defer></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js" defer></script>
+    <script src="js/common.js" defer></script>
+
+    <!-- REACT -->
+    <script src="js/picture.jsx" type="text/babel" defer></script>
   </head>
   <body>
     <h1>
@@ -16,9 +22,7 @@
     <main>
       <section id="infos" class="flex">
         <div class="w-50">
-          <div class="text-center">
-            <img class="w-100 object-fit-cover" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png" alt="Salamèche">
-          </div>
+          <div class="text-center" id="img-container"></div>
           <div class="stats hp-3 att-4 def-3 spe-att-4 spe-def-3 speed-4">
             <h3>Stats</h3>
             <div>
