@@ -5,11 +5,13 @@ function Picture() {
   });
   React.useEffect(() => {
     (async () => {
-      const data = await fetchBaseData();
-      setImgData({
-        src: data.sprites.other['official-artwork'].front_default,
-        alt: ''
-      });
+      if (imgData.src.length < 1) {
+        const data = await fetchBaseData();
+        setImgData({
+          src: data.sprites.other['official-artwork'].front_default,
+          alt: ''
+        });
+      }
     })();
   });
   if (imgData.src.length) {
